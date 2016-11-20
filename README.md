@@ -16,7 +16,7 @@ To run this example
 6. To stop container run: docker stop <ID> (ID can be fetched from 'docker ps' command output)*
 (Detils about [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/) )
 
-Note:
+Notes:*
 1. Scripts/FddHelpers.psm1 contains helper powershell functions used during demonstration (do not treat it as PS best practice :) )
 
 2. If image build is failing with 'cannot resolve DNS' error, try:
