@@ -2,12 +2,15 @@ Simple WebApplication to demonstrate Windows Containers and Docker tools
 
 
 To start using Windows Containers:
+
 1. Ensure OS version - Windows Server 2016 (CTP3+), Windows 10 (Anniversary update, Professional or Enterprise)
-2. Follow instructions from Scripts/HowToStart.ps1*
+2. Follow instructions from Scripts/HowToStart.ps1
+
 (More details [Windows Containers Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/quick_start))
 
 
 To run this example
+
 1. Open cmd or powershell console
 2. Go to SampleWebAppWithDocker folder
 3. Run: docker build -t aspmvc-demo .
