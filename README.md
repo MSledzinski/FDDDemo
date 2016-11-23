@@ -16,15 +16,16 @@ To run this example
 6. To stop container run: docker stop <ID> (ID can be fetched from 'docker ps' command output)*
 (Detils about [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/) )
 
-Notes:*
-1. Scripts/FddHelpers.psm1 contains helper powershell functions used during demonstration (do not treat it as PS best practice :) )
 
+Notes:
+
+1. Scripts/FddHelpers.psm1 contains helper powershell functions used during demonstration
 2. If image build is failing with 'cannot resolve DNS' error, try:
-  - open Powershell console as admin
-  - run: Stop-Service docker
-  - run: notepad C:\ProgramData\Docker\config\daemon.json
-  - add to file Google DNS ip, in form of: { "dns": ["8.8.8.8"] }   
-  - save and close
-  - run: Start-Service docker
+  * open Powershell console as admin
+  * run: Stop-Service docker
+  * run: notepad C:\ProgramData\Docker\config\daemon.json
+  * add to file Google DNS IP, in json format: { "dns": ["8.8.8.8"] }   
+  * save and close
+  * run: Start-Service docker
    
-3. File .dockerignore should also ingore nuget packages folder - it is not, to reduce container build time during demo
+3. File .dockerignore should also ingore nuget packages folder - currently it is not, to reduce container build time during demo
