@@ -28,8 +28,7 @@ WORKDIR c:/build
 COPY . c:/build
 
 # Restore packages, build, copy [5]
-# nuget restore should be called first - but it would take time and requires network connection
-RUN echo "Should be: nuget restore" \
+RUN nuget restore \
     && "c:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" /p:Platform="Any CPU" /p:VisualStudioVersion=12.0 /p:VSToolsPath=c:\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\tools\VSToolsPath SampleWebAppWithDocker.sln \
     && xcopy c:\build\SampleWebAppWithDocker\* c:\inetpub\wwwroot /s
 
